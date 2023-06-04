@@ -1,0 +1,16 @@
+f0f947,127.0.0.1,GET,https://127.0.0.1:8000/,1685790533,,404
+9512b3,127.0.0.1,GET,https://127.0.0.1:8000/favicon.ico,1685790536,90cbe6,404
+90cbe6,127.0.0.1,GET,https://127.0.0.1:8000/favicon.ico,1685790536,,404
+27b3f2,127.0.0.1,GET,https://127.0.0.1:8000/,1685826804,,404
+1055a4,127.0.0.1,GET,https://127.0.0.1:8000/,1685826806,,404
+dad8cc,127.0.0.1,GET,https://127.0.0.1:8000/,1685837327,e9761c,500
+e9761c,127.0.0.1,GET,https://127.0.0.1:8000/,1685837327,,500
+20a446,127.0.0.1,GET,https://127.0.0.1:8000/,1685837411,,200
+e9ef04,127.0.0.1,GET,https://127.0.0.1:8000/admin/dist/assets/libs/metismenu/metisMenu.min.js.map,1685837427,cf0332,404
+cf0332,127.0.0.1,GET,https://127.0.0.1:8000/admin/dist/assets/libs/metismenu/metisMenu.min.js.map,1685837427,,404
+e12df1,127.0.0.1,GET,https://127.0.0.1:8000/admin/dist/assets/libs/bootstrap/js/bootstrap.bundle.min.js.map,1685837428,da8dd6,404
+da8dd6,127.0.0.1,GET,https://127.0.0.1:8000/admin/dist/assets/libs/bootstrap/js/bootstrap.bundle.min.js.map,1685837428,,404
+e32ed6,127.0.0.1,GET,https://127.0.0.1:8000/admin/dist/assets/libs/node-waves/waves.min.js.map,1685837429,baed2d,404
+baed2d,127.0.0.1,GET,https://127.0.0.1:8000/admin/dist/assets/libs/node-waves/waves.min.js.map,1685837429,,404
+76141b,127.0.0.1,GET,https://127.0.0.1:8000/pages/table-datatable.html,1685837758,c8cf7f,404
+c8cf7f,127.0.0.1,GET,https://127.0.0.1:8000/pages/table-datatable.html,1685837758,,404
