@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Anneepedagogique{% endblock %}
+
+{% block body %}
+     <div class="card">
+        <div class="card-header">    <h1>Ajouter Annee pédagogique</h1>  </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">De : </label>
+                        <input type="text" class="form-control" id="annee1" >
+                        <span id="msgannee1" style="color: red;"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="">à: </label>
+                        <input type="date" class="form-control" id="annee2" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Libellé : </label>
+                        <input type="text" class="form-control" id="annee1_annee2" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="classe">Classe</label>
+                        <select class="form-control" id="classe">
+                            <option value="">Sélectionner</option>
+                            {% for classe in classes %}
+                                <option value="{{ classe.id }}">{{classe.libelle}}</option>
+                            {% endfor %}                    
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>    <a href="{{ path('app_anneepedagogique_index') }}"class="btn btn-outline-secondary">back to list</a>    </p>
+    </div>
+
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //recupérer les annees seulement
+            var date1 = $("#annee1").val();
+            // let annee1 = date1.getFullYear();
+            var date2 = $("#annee2").val();;
+            //let annee2 = date2.getFullYear();
+             // Afficher la valeur
+            
+            $("#annee2").click(function() {
+                alert(date1);
+            })
+        })
+        
+
+    </script>
+{% endblock  %}

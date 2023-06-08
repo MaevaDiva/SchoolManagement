@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Anneepedagogique {% endblock %}
+
+{% block body %}
+
+    <div class="card">
+        <div class="card-header text-center text-bold ">Année  pédagogique  </div>
+            <div class="card-body">
+                
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>LibelleAnnee</th>
+                            <th>actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for anneepedagogique in anneepedagogiques %}
+                        <tr>
+                            <td>{{ anneepedagogique.id }}</td>
+                            <td>{{ anneepedagogique.libelleAnnee }}</td>
+                            <td>
+                                <a href="{{ path('app_anneepedagogique_show', {'id': anneepedagogique.id}) }}" class="btn btn-outline-info">show</a>
+                                <a href="{{ path('app_anneepedagogique_edit', {'id': anneepedagogique.id}) }}" class="btn btn-outline-primary">Modifier</a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="3">no records found</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+    </div>
+
+    <a href="{{ path('app_anneepedagogique_new') }}" class="btn btn-outline-success">Ajouter une année</a>
+{% endblock %}

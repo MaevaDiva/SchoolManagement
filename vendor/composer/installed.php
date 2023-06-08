@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1dfd6a38aa51544dcc8f62f8096b40957267c6ba',
+        'reference' => 'a55149b549d0e5d72dba393ca597bb8a948ce21b',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1dfd6a38aa51544dcc8f62f8096b40957267c6ba',
+            'reference' => 'a55149b549d0e5d72dba393ca597bb8a948ce21b',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -574,6 +574,15 @@
             'aliases' => array(),
             'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
             'dev_requirement' => true,
+        ),
+        'sensio/framework-extra-bundle' => array(
+            'pretty_version' => 'v6.2.10',
+            'version' => '6.2.10.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../sensio/framework-extra-bundle',
+            'aliases' => array(),
+            'reference' => '2f886f4b31f23c76496901acaedfedb6936ba61f',
+            'dev_requirement' => false,
         ),
         'symfony/amqp-messenger' => array(
             'pretty_version' => 'v5.4.22',
