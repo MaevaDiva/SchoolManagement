@@ -3,9 +3,13 @@
 {% block title %}New Eleve{% endblock %}
 
 {% block body %}
-    <h1>Create new Eleve</h1>
+    <div class="card">
+        <div class="card-header">    <h1>Ajouter Annee pédagogique</h1>  </div>
+        <div class="card-body">
+            {{ include('eleve/_form.html.twig') }}
 
-    {{ include('eleve/_form.html.twig') }}
+        </div>
+        <p>    <a href="{{ path('app_eleve_index') }}"class="btn btn-outline-secondary">back to list</a>    </p>
+    </div>
 
-    <a href="{{ path('app_eleve_index') }}">back to list</a>
 {% endblock %}

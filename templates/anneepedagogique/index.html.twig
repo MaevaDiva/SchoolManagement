@@ -12,7 +12,8 @@
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>LibelleAnnee</th>
+                            <th>Année pédagogique</th>
+                            <th>Classe</th>
                             <th>actions</th>
                         </tr>
                     </thead>
@@ -20,7 +21,11 @@
                     {% for anneepedagogique in anneepedagogiques %}
                         <tr>
                             <td>{{ anneepedagogique.id }}</td>
-                            <td>{{ anneepedagogique.libelleAnnee }}</td>
+                            <td>{{ anneepedagogique.id }}</td>
+                            <td> {% if anneepedagogique.classe != null %}
+                                {{ anneepedagogique.classe.libelle }}
+                                {% endif %} 
+                            </td>
                             <td>
                                 <a href="{{ path('app_anneepedagogique_show', {'id': anneepedagogique.id}) }}" class="btn btn-outline-info">show</a>
                                 <a href="{{ path('app_anneepedagogique_edit', {'id': anneepedagogique.id}) }}" class="btn btn-outline-primary">Modifier</a>

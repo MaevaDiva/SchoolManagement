@@ -596,6 +596,8 @@ class ComposerStaticInit3910682e4adae7dd9bc5c2b4e1ed6260
     );
 
     public static $classMap = array (
+        'App\\Controller\\AnneepedagogiqueController' => __DIR__ . '/../..' . '/src/Controller/AnneepedagogiqueController.php',
+        'App\\Controller\\EleveController' => __DIR__ . '/../..' . '/src/Controller/EleveController.php',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
         'App\\Entity\\Anneepedagogique' => __DIR__ . '/../..' . '/src/Entity/Anneepedagogique.php',
         'App\\Entity\\Classe' => __DIR__ . '/../..' . '/src/Entity/Classe.php',
@@ -603,12 +605,15 @@ class ComposerStaticInit3910682e4adae7dd9bc5c2b4e1ed6260
         'App\\Entity\\Inscription' => __DIR__ . '/../..' . '/src/Entity/Inscription.php',
         'App\\Entity\\Matiere' => __DIR__ . '/../..' . '/src/Entity/Matiere.php',
         'App\\Entity\\Modalite' => __DIR__ . '/../..' . '/src/Entity/Modalite.php',
+        'App\\Entity\\Mois' => __DIR__ . '/../..' . '/src/Entity/Mois.php',
         'App\\Entity\\Nationalite' => __DIR__ . '/../..' . '/src/Entity/Nationalite.php',
         'App\\Entity\\Paiement' => __DIR__ . '/../..' . '/src/Entity/Paiement.php',
         'App\\Entity\\Photo' => __DIR__ . '/../..' . '/src/Entity/Photo.php',
         'App\\Entity\\Professeur' => __DIR__ . '/../..' . '/src/Entity/Professeur.php',
         'App\\Entity\\Sexe' => __DIR__ . '/../..' . '/src/Entity/Sexe.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
+        'App\\Form\\AnneepedagogiqueType' => __DIR__ . '/../..' . '/src/Form/AnneepedagogiqueType.php',
+        'App\\Form\\EleveType' => __DIR__ . '/../..' . '/src/Form/EleveType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\AnneepedagogiqueRepository' => __DIR__ . '/../..' . '/src/Repository/AnneepedagogiqueRepository.php',
         'App\\Repository\\ClasseRepository' => __DIR__ . '/../..' . '/src/Repository/ClasseRepository.php',
@@ -616,6 +621,7 @@ class ComposerStaticInit3910682e4adae7dd9bc5c2b4e1ed6260
         'App\\Repository\\InscriptionRepository' => __DIR__ . '/../..' . '/src/Repository/InscriptionRepository.php',
         'App\\Repository\\MatiereRepository' => __DIR__ . '/../..' . '/src/Repository/MatiereRepository.php',
         'App\\Repository\\ModaliteRepository' => __DIR__ . '/../..' . '/src/Repository/ModaliteRepository.php',
+        'App\\Repository\\MoisRepository' => __DIR__ . '/../..' . '/src/Repository/MoisRepository.php',
         'App\\Repository\\NationaliteRepository' => __DIR__ . '/../..' . '/src/Repository/NationaliteRepository.php',
         'App\\Repository\\PaiementRepository' => __DIR__ . '/../..' . '/src/Repository/PaiementRepository.php',
         'App\\Repository\\PhotoRepository' => __DIR__ . '/../..' . '/src/Repository/PhotoRepository.php',

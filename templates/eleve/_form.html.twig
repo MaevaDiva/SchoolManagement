@@ -1,4 +1,64 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="matricule">{{ form_label(form.matricule) }}</label>
+               <input type="text" name="" id="matricule" value="{{ numeroMatricule }}" readonly>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="prenom">{{ form_label(form.prenom) }}</label>
+                {{ form_widget(form.prenom) }}
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="nom">{{ form_label(form.nom) }}</label>
+                {{ form_widget(form.nom) }}
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="adresse">{{ form_label(form.adresse) }}</label>
+                {{ form_widget(form.adresse) }}
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="nomcomplet">{{ form_label(form.nomcompletTuteur) }}</label>
+                {{ form_widget(form.nomcompletTuteur) }}
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="telephone">{{ form_label(form.telephoneTuteur) }}</label>
+                {{ form_widget(form.telephoneTuteur) }}
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="sexe">{{ form_label(form.sexe) }}</label>
+                {{ form_widget(form.sexe) }}
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="formPhoto" class="form-label"> {{form_label(form.photo)}} </label>
+                {{ form_widget(form.photo) }}
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="classe">{{ form_label(form.classe) }}</label>
+                {{ form_widget(form.classe) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <button class="btn btn-outline-secondary col-1">{{ button_label|default('Save') }}</button>
+    </div>
 {{ form_end(form) }}

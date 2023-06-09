@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'a55149b549d0e5d72dba393ca597bb8a948ce21b',
+        'reference' => '53316e3918c723f9e7db02a84d85c4832ab39d55',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'a55149b549d0e5d72dba393ca597bb8a948ce21b',
+            'reference' => '53316e3918c723f9e7db02a84d85c4832ab39d55',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -74,12 +74,12 @@
             'dev_requirement' => false,
         ),
         'doctrine/doctrine-bundle' => array(
-            'pretty_version' => '2.9.1',
-            'version' => '2.9.1.0',
+            'pretty_version' => '2.10.0',
+            'version' => '2.10.0.0',
             'type' => 'symfony-bundle',
             'install_path' => __DIR__ . '/../doctrine/doctrine-bundle',
             'aliases' => array(),
-            'reference' => '7539b3c8bd620f7df6c2c6d510204bd2ce0064e3',
+            'reference' => 'b2ec6c2668f6dc514e8bf51257d19c7c19398afe',
             'dev_requirement' => false,
         ),
         'doctrine/doctrine-migrations-bundle' => array(

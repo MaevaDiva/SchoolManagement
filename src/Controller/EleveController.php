@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Eleve;
 use App\Form\EleveType;
 use App\Repository\EleveRepository;
+use App\Services\DiverUtils;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,13 +30,30 @@ class EleveController extends AbstractController
     /**
      * @Route("/new", name="app_eleve_new", methods={"GET", "POST"})
      */
-    public function new(Request $request, EleveRepository $eleveRepository): Response
+    public function new(Request $request, EleveRepository $eleveRepository, DiverUtils $diverUtils,EntityManagerInterface $entityManager): Response
     {
         $eleve = new Eleve();
         $form = $this->createForm(EleveType::class, $eleve);
         $form->handleRequest($request);
 
+        //gestion matricule
+        $numeroMatricule = $diverUtils->numeroMatriculeEleve($entityManager); 
+
         if ($form->isSubmitted() && $form->isValid()) {
+            $image = $form->get('photo')->getData();   
+            $nom = $form->get('nom')->getData(); 
+
+            if ($image) {
+                $fichier = md5(uniqid()).'.'.$image->guessExtension();
+                dd($fichier);
+                $image->move(
+                    $this->getParameter('images_directory'),
+                    $fichier, 
+                );
+
+                $eleve->setPhoto($fichier);
+            }
+
             $eleveRepository->add($eleve, true);
 
             return $this->redirectToRoute('app_eleve_index', [], Response::HTTP_SEE_OTHER);
@@ -43,6 +62,7 @@ class EleveController extends AbstractController
         return $this->renderForm('eleve/new.html.twig', [
             'eleve' => $eleve,
             'form' => $form,
+            'matricule' => $numeroMatricule
         ]);
     }
 

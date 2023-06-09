@@ -17,15 +17,15 @@ class AnneepedagogiqueType extends AbstractType
         $builder
             ->add('libelleAnnee', TextType::class,
                     array('label'=>'Libellé:  ',
-                    'required'=>false,
+                    'required'=>true,
                     'attr'=>array('class'=>'form-control')))
+
             ->add('classe', EntityType::class, [
                     'class' => Classe::class,
                     'choice_label' => 'getLibelle',
                     'attr'=>array('class'=>'form-control form-control-sm ', "style"=>"width:100%;"),
-                    
-                    'required'=>false,
-                    'label'=>'Libellé :',
+                    'required'=>true,
+                    'label'=>'Classe :',
    
               ])
         ;

@@ -16,9 +16,6 @@
                 <th>Adresse</th>
                 <th>NomcompletTuteur</th>
                 <th>TelephoneTuteur</th>
-                <th>EmailTuteur</th>
-                <th>CreatedAt</th>
-                <th>UpdatedAt</th>
                 <th>Photo</th>
                 <th>actions</th>
             </tr>
@@ -28,15 +25,11 @@
             <tr>
                 <td>{{ eleve.id }}</td>
                 <td>{{ eleve.matricule }}</td>
-                <td>{{ eleve.username }}</td>
                 <td>{{ eleve.prenom }}</td>
                 <td>{{ eleve.nom }}</td>
                 <td>{{ eleve.adresse }}</td>
                 <td>{{ eleve.nomcompletTuteur }}</td>
                 <td>{{ eleve.telephoneTuteur }}</td>
-                <td>{{ eleve.emailTuteur }}</td>
-                <td>{{ eleve.createdAt ? eleve.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ eleve.updatedAt ? eleve.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ eleve.photo }}</td>
                 <td>
                     <a href="{{ path('app_eleve_show', {'id': eleve.id}) }}">show</a>

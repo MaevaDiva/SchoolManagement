@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controller\\AnneepedagogiqueController' => $baseDir . '/src/Controller/AnneepedagogiqueController.php',
+    'App\\Controller\\EleveController' => $baseDir . '/src/Controller/EleveController.php',
     'App\\Controller\\HomeController' => $baseDir . '/src/Controller/HomeController.php',
     'App\\Entity\\Anneepedagogique' => $baseDir . '/src/Entity/Anneepedagogique.php',
     'App\\Entity\\Classe' => $baseDir . '/src/Entity/Classe.php',
@@ -13,12 +15,15 @@ return array(
     'App\\Entity\\Inscription' => $baseDir . '/src/Entity/Inscription.php',
     'App\\Entity\\Matiere' => $baseDir . '/src/Entity/Matiere.php',
     'App\\Entity\\Modalite' => $baseDir . '/src/Entity/Modalite.php',
+    'App\\Entity\\Mois' => $baseDir . '/src/Entity/Mois.php',
     'App\\Entity\\Nationalite' => $baseDir . '/src/Entity/Nationalite.php',
     'App\\Entity\\Paiement' => $baseDir . '/src/Entity/Paiement.php',
     'App\\Entity\\Photo' => $baseDir . '/src/Entity/Photo.php',
     'App\\Entity\\Professeur' => $baseDir . '/src/Entity/Professeur.php',
     'App\\Entity\\Sexe' => $baseDir . '/src/Entity/Sexe.php',
     'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
+    'App\\Form\\AnneepedagogiqueType' => $baseDir . '/src/Form/AnneepedagogiqueType.php',
+    'App\\Form\\EleveType' => $baseDir . '/src/Form/EleveType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\AnneepedagogiqueRepository' => $baseDir . '/src/Repository/AnneepedagogiqueRepository.php',
     'App\\Repository\\ClasseRepository' => $baseDir . '/src/Repository/ClasseRepository.php',
@@ -26,6 +31,7 @@ return array(
     'App\\Repository\\InscriptionRepository' => $baseDir . '/src/Repository/InscriptionRepository.php',
     'App\\Repository\\MatiereRepository' => $baseDir . '/src/Repository/MatiereRepository.php',
     'App\\Repository\\ModaliteRepository' => $baseDir . '/src/Repository/ModaliteRepository.php',
+    'App\\Repository\\MoisRepository' => $baseDir . '/src/Repository/MoisRepository.php',
     'App\\Repository\\NationaliteRepository' => $baseDir . '/src/Repository/NationaliteRepository.php',
     'App\\Repository\\PaiementRepository' => $baseDir . '/src/Repository/PaiementRepository.php',
     'App\\Repository\\PhotoRepository' => $baseDir . '/src/Repository/PhotoRepository.php',
