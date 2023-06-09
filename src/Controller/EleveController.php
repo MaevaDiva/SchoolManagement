@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Entity\Eleve;
 use App\Form\EleveType;
 use App\Repository\EleveRepository;
-use App\Services\DiversUtils;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -30,14 +29,14 @@ class EleveController extends AbstractController
     /**
      * @Route("/new", name="app_eleve_new", methods={"GET", "POST"})
      */
-    public function new(Request $request, EleveRepository $eleveRepository,EntityManagerInterface $entityManager, DiversUtils $diversUtils): Response
+    public function new(Request $request, EleveRepository $eleveRepository,EntityManagerInterface $entityManager): Response
     {
         $eleve = new Eleve();
         $form = $this->createForm(EleveType::class, $eleve);
         $form->handleRequest($request);
 
         //gestion matricule
-        $numeroMatricule = $diversUtils->numeroMatriculeEleve($entityManager); 
+        //$numeroMatricule = $diversUtils->numeroMatriculeEleve($entityManager); 
 
         if ($form->isSubmitted() && $form->isValid()) {
             $image = $form->get('photo')->getData();   
@@ -62,7 +61,6 @@ class EleveController extends AbstractController
         return $this->renderForm('eleve/new.html.twig', [
             'eleve' => $eleve,
             'form' => $form,
-            'matricule' => $numeroMatricule
         ]);
     }
 

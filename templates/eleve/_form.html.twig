@@ -4,7 +4,7 @@
         <div class="col-md-3">
             <div class="form-group">
                 <label for="matricule">{{ form_label(form.matricule) }}</label>
-               <input type="text" name="" id="matricule" value="{{ numeroMatricule }}" readonly>
+                {{ form_widget(form.matricule) }}
             </div>
         </div>
         <div class="col-md-3">
